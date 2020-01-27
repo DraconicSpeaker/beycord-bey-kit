@@ -1,6 +1,6 @@
 //Import required modules
 const Discord = require("discord.js");
-const Beyblade = require("./Beyblade.js");
+const Beyblade = require("../class/Beyblade.js");
 
 // Change NewBey to the Bey's name with spaces and special character removed.
 class NewBey extends Beyblade {
