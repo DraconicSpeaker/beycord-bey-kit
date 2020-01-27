@@ -1,8 +1,13 @@
-const Discord = require("discord.js");
-const fs = require("fs")
+//Ok this so for you who likes to know what really happens behind the scenes because making a Bey seems too easy to be true.
 
+//Import the require modules
+const Discord = require("discord.js");
+const fs = require("fs");
+
+//The legendary Beyblade class that shortens everything!!!
 class Beyblade {
   constructor(name, type, image, special, firstOwner, id){
+    //Set up the Bey's information
     this.name = name;
     this.type = type;
     this.image = image;
@@ -11,6 +16,8 @@ class Beyblade {
     this.level = 1;
     this.xp = 0;
     this.id;
+    
+    //Checks if a ID is provided. If not, generate a new one.
     if(id){
     this.id = id;
       return;
@@ -30,9 +37,11 @@ class Beyblade {
     let beyid = this.id
   }
   special(acted, victim, message, player){
+    //Resets the enrgy of a player.
     acted.energy = 0;
   }
   displayInfo(message){
+    //Displays the info of the Bey. This is what appears when you do the ;info or ;current command.
     let embed = new Discord.RichEmbed()
     .setColor("#7f7fff")
     .setTitle(`**${this.name}**'s Information`)
@@ -48,4 +57,5 @@ class Beyblade {
   }
 }
 
+//The Beyblade class is born!!!
 module.exports = Beyblade;
