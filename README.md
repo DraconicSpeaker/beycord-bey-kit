@@ -18,9 +18,9 @@ Boom! You have done setting up your computer and it's ready to make Beys.
 
 # Documentation
 __**Classes**__:
-How classes are shown is classname: [ properties that can be modified ] (aliases)
-**player**: {
-             hp: The player's Hitpoints
-             atk: The player's damage dealt to the other player. Can be used to reduce damage from the opponent.
-             stamina: The player's stamina
-            } (acted, victim)
+How classes are shown is classname: [ properties that can be modified ] (aliases)  
+**player**: {  
+             hp: The player's Hitpoints  
+             atk: The player's damage dealt to the other player. Can be used to reduce damage from the opponent.  
+             stamina: The player's stamina  
+            } (acted, victim)  
