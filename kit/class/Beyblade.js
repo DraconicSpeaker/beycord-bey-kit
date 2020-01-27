@@ -22,7 +22,7 @@ class Beyblade {
     this.id = id;
       return;
     }
-    let ids = JSON.parse(fs.readFileSync("./beyids.json", "utf8"));
+    let ids = JSON.parse(fs.readFileSync("../beyids.json", "utf8"));
     if(!ids[this.name]){
       ids[this.name] = {
         latest: 0
