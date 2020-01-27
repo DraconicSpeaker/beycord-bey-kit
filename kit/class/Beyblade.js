@@ -31,7 +31,7 @@ class Beyblade {
     let iid = ids[this.name].latest + 1;
     this.id = iid;
     ids[this.name].latest = iid;
-    fs.writeFile("./beyids.json", JSON.stringify(ids), err => {
+    fs.writeFile("../beyids.json", JSON.stringify(ids), err => {
     if (err) console.log(err);
   });
     let beyid = this.id
