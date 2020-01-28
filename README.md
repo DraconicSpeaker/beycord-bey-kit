@@ -21,7 +21,10 @@ Ok so here’s a few reasons:
 1) You can show off to people and be like: “OI!! I made that Bey! You see how high-IQed I am??!?”
 2) A special role on the Overcold server.
 3) A chance of getting your own Bey in the first few IDs so its valuable and you can trade it for many Valtz. 👀👀👀
-4) You can make a Bey however you want and you can learn JavaScript while making a Bey with the help of comments written in the template.
+4) You can make a Bey however you want and you can learn JavaScript while making a Bey with the help of comments written in the template.  
+
+Here are some satisfied Bey makers' quotes:  
+**DraconicSpeaker#3192**: "Well, once you got it setup and figured out, it's super easy to go through and just comes down to figuring out how you want the bey to function. It's actually pretty friggin fun to use too, especially setting up special moves with their special mechanics and such."  
 
 # Documentation
 __**Classes**__:
