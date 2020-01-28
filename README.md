@@ -16,6 +16,13 @@ Boom! You have done setting up your computer and it's ready to make Beys.
 7) If Check.js tells you that there were no errors and your Bey is ready. Email the cloned-and-renamed template.js along with your Discord username and discriminator and anything that you want the submission reader to take note to submissions@overcold.cf.
 8) Done! Just sit back, relax and wait for your submissions to be read.
 
+# Why should I make a Bey for Beycord?
+Ok so here’s a few reasons:
+1) You can show off to people and be like: “OI!! I made that Bey! You see how high-IQed I am??!?”
+2) A special role on the Overcold server.
+3) A chance of getting your own Bey in the first few IDs so its valuable and you can trade it for many Valtz. 👀👀👀
+4) You can make a Bey however you want and you can learn JavaScript while making a Bey with the help of comments written in the template.
+
 # Documentation
 __**Classes**__:
 How classes are shown is classname: [ properties that can be modified ] (aliases)  
