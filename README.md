@@ -35,3 +35,6 @@ How classes are shown is classname: [ properties that can be modified ] (aliases
              **stamina**: The player's stamina  
              **bey**: An extended Beyblade class. Basically a player’s Bey. For more info, go to kit/class/Beyblade.js for the unextended version and kit/beys/template.js for the template of an extended Bey.
             ] (acted, victim)  
+            
+# IMPORTANT NOTES
+No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player class.
