@@ -6,6 +6,9 @@ npm install discord.js fs --save
 ```
 Boom! You have done setting up your computer and it's ready to make Beys.
 
+# What is Beycord?
+Just google it and click the first result **that is not an ad**. K thanks!
+
 # How to use the Bey kit?
 1) Read the documentation section below to know how to make a special move.
 2) Go to beycord-bey-kit/kit/beys and clone template.js
