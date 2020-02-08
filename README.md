@@ -1,6 +1,6 @@
 # Beycord Bey Kit
 
-To use this kit, you must make sure your device supports JavaScript, have [Node.js](https://nodejs.org/en/) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
+To use this kit, you must make sure your device supports JavaScript and have [Node.js](https://nodejs.org/en/) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
 ```
 npm install discord.js fs --save
 ```
@@ -13,7 +13,7 @@ Boom! You have done setting up your computer and it's ready to make Beys.
 4) Open the renamed template.js and there should be comments to teach you how to code a Bey which should be easy to the point that even people who don't know JavaScript can make one. All you need to know is some basic knowledge of how Beycord works and know MATH.
 5) Once you have finished modifying the cloned-and-renamed template.js. Open the command terminal, "cd" your way to where the Beycord Bey Kit folder is downloaded and type "node check.js" with "s removed.
 6) Check.js should now help you check if there are any errors and tell you if there are any.
-7) If Check.js tells you that there were no errors and your Bey is ready. Email the cloned-and-renamed template.js along with your Discord username and discriminator and anything that you want the submission reader to take note to submissions@overcold.cf.
+7) If Check.js tells you that there were no errors and your Bey is ready. Email the cloned-and-renamed template.js along with your Discord username and discriminator and anything that you want the submission reader to take note to [submissions@overcold.cf](mailto:submissions@overcold.cf).
 8) Done! Just sit back, relax and wait for your submissions to be read.
 
 # Why should I make a Bey for Beycord?
