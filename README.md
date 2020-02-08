@@ -40,4 +40,4 @@ How classes are shown is classname: [ properties that can be modified ] (aliases
             ] (acted, victim)  
             
 # IMPORTANT NOTES
-No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player class.
+No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player classes.
