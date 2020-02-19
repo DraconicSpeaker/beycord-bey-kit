@@ -33,11 +33,15 @@ Here are some satisfied Bey makers' quotes:
 __**Classes**__:
 How classes are shown is classname: [ properties that can be modified ] (aliases)  
 **player**: [  
-             **hp**: The player's Hitpoints  
-             **atk**: The player's damage dealt to the other player. Can be used to reduce damage from the opponent.  
-             **stamina**: The player's stamina  
-             **bey**: An extended Beyblade class. Basically a player’s Bey. For more info, go to kit/class/Beyblade.js for the unextended version and kit/beys/template.js for the template of an extended Bey.
+             **hp**: The player's Hitpoints. [Int]  
+             **atk**: The player's damage dealt to the other player. Can be used to reduce damage from the opponent. [Int]  
+             **stamina**: The player's stamina [Int]  
+             **bey**: An extended Beyblade class. Basically a player’s Bey. For more info, go to kit/class/Beyblade.js for the unextended version and kit/beys/template.js for the template of an extended Bey. [Beyblade]  
+             **maxhp**: The player's max HP. [Int]  
+             **maxstamina**: The player's max stamina. [Int]  
+             **sp**: The player's special energy charge up. [Int]  
+             All properties from the [Discord User class](https://discord.js.org/#/docs/main/stable/class/User) can also be accessible.
             ] (acted, victim)  
             
 # IMPORTANT NOTES
-No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player classes.
+No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player classes. Int, aka Integer, are numbers.
