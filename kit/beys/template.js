@@ -16,7 +16,7 @@ class NewBey extends Beyblade {
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     .setTitle(`[${acted.username}] Name used **Special Name**. 123 damage dealt.`)
     .setColor("#551a8b");
     
