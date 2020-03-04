@@ -1,6 +1,6 @@
 # Beycord Bey Kit
 
-To use this kit, you must make sure your device supports JavaScript and have [Node.js](https://nodejs.org/en/) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
+To use this kit, you must make sure your device supports JavaScript and have [Node.js](https://nodejs.org/en/) (12.0.0+ version required) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
 ```
 npm install discord.js fs --save
 ```
