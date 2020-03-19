@@ -1,4 +1,5 @@
-# Beycord Bey Kit
+Beycord Bey Kit
+===============
 
 To use this kit, you must make sure your device supports JavaScript and have [Node.js](https://nodejs.org/en/) (12.0.0+ version required) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
 ```
@@ -6,10 +7,19 @@ npm install discord.js fs --save
 ```
 Boom! You have done setting up your computer and it's ready to make Beys.
 
+Table of Contents
+=================
+• [What is Beycord?](#what-is-beycord)
+• [How to use the Bey Kit](#how-to-use-the-bey-kit)
+• [Why should I make a Bey for Beycord](#why-should-i-make-a-bey-for-beycord)
+• [Help! My eyes hurt looking at the code!](#help-my-eyes-hurt-looking-at-the-code)
+• [Documentation](#documentation)
+• [IMPORTANT NOTES](#inportant-notes)
+
 # What is Beycord?
 Just google it and click the first result **that is not an ad**. K thanks!
 
-# How to use the Bey kit?
+# How to use the Bey kit
 1) Read the documentation section below to know how to make a special move.
 2) Go to beycord-bey-kit/kit/beys and clone template.js
 3) Rename the template.js to something like BeyNameWithSpacesAndSpecialCharactersGone.js and place it in the same folder as the normal template.js.
@@ -28,6 +38,19 @@ Ok so here’s a few reasons:
 
 Here are some satisfied Bey makers' quotes:  
 **DraconicSpeaker#3192**: "Well, once you got it setup and figured out, it's super easy to go through and just comes down to figuring out how you want the bey to function. It's actually pretty friggin fun to use too, especially setting up special moves with their special mechanics and such."  
+
+# Help! My eyes hurt looking at the code!
+Oh is that so? Don't worry, I got a solution here for you. Simply install one of the recommended code editors. They colo(u)r the code, making them more easier to look at, and **guide** you through when you are coding. Ya, that's how handy their are.
+
+Here are some recommended code editors:
+1) [Visual Studio Code](https://code.visualstudio.com/)
+2) [Notepad++](https://notepad-plus-plus.org/)
+3) [Atom](https://atom.io/)
+4) [Brackets](http://brackets.io/)
+5) [NetBeans](https://netbeans.org/)
+
+I personally use and recommend Visual Studio Code because **YES** (you will get why when you install it) but others also have parts that they can do well where Visual Studio Code can't. All code editors have their ups and downs, just choose one that fits you the most.
+
 
 # Documentation
 __**Classes**__:
