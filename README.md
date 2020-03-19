@@ -40,7 +40,7 @@ Here are some satisfied Bey makers' quotes:
 **DraconicSpeaker#3192**: "Well, once you got it setup and figured out, it's super easy to go through and just comes down to figuring out how you want the bey to function. It's actually pretty friggin fun to use too, especially setting up special moves with their special mechanics and such."  
 
 # Help! My eyes hurt looking at the code!
-Oh is that so? Don't worry, I got a solution here for you. Simply install one of the recommended code editors. They colo(u)r the code, making them more easier to look at, and **guide** you through when you are coding. Ya, that's how handy their are.
+Oh is that so? Don't worry, I got a solution here for you. Simply install one of the recommended code editors. They colo(u)r the code, making them more easier to look at, and **guide** you through when you are coding. Ya, that's how handy they are.
 
 Here are some recommended code editors:
 1) [Visual Studio Code](https://code.visualstudio.com/)
