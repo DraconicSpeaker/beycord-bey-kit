@@ -9,12 +9,12 @@ Boom! You have done setting up your computer and it's ready to make Beys.
 
 Table of Contents
 =================
-• [What is Beycord?](#what-is-beycord)
-• [How to use the Bey Kit](#how-to-use-the-bey-kit)
-• [Why should I make a Bey for Beycord](#why-should-i-make-a-bey-for-beycord)
-• [Help! My eyes hurt looking at the code!](#help-my-eyes-hurt-looking-at-the-code)
-• [Documentation](#documentation)
-• [IMPORTANT NOTES](#inportant-notes)
+• [What is Beycord?](#what-is-beycord)  
+• [How to use the Bey Kit](#how-to-use-the-bey-kit)  
+• [Why should I make a Bey for Beycord](#why-should-i-make-a-bey-for-beycord)  
+• [Help! My eyes hurt looking at the code!](#help-my-eyes-hurt-looking-at-the-code)  
+• [Documentation](#documentation)  
+• [IMPORTANT NOTES](#inportant-notes)  
 
 # What is Beycord?
 Just google it and click the first result **that is not an ad**. K thanks!
