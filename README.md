@@ -49,7 +49,7 @@ Here are some recommended code editors:
 4) [Brackets](http://brackets.io/)
 5) [NetBeans](https://netbeans.org/)
 
-I personally use and recommend Visual Studio Code because **YES** (you will get why when you install it) but others also have parts that they can do well where Visual Studio Code can't. All code editors have their ups and downs, just choose one that fits you the most.
+I personally use and recommend Visual Studio Code because **YES** (you will get why when you installed it) but others also have parts that they can do well where Visual Studio Code don't. All code editors have their ups and downs, just choose one that fits you the most.
 
 
 # Documentation
