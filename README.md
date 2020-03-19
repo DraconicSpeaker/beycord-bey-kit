@@ -14,7 +14,7 @@ Table of Contents
 • [Why should I make a Bey for Beycord](#why-should-i-make-a-bey-for-beycord)  
 • [Help! My eyes hurt looking at the code!](#help-my-eyes-hurt-looking-at-the-code)  
 • [Documentation](#documentation)  
-• [IMPORTANT NOTES](#inportant-notes)  
+• [IMPORTANT NOTES](#important-notes)  
 
 # What is Beycord?
 Just google it and click the first result **that is not an ad**. K thanks!
