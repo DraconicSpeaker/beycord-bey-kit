@@ -1,4 +1,4 @@
-[![Beycord](https://cdn.discordapp.com/avatars/570115430786531340/dfeb381c65bf3299a58895d6a7fde3fb.webp)]
+![Beycord](https://cdn.discordapp.com/avatars/570115430786531340/dfeb381c65bf3299a58895d6a7fde3fb.png)
 Beycord Bey Kit
 ===============
 
