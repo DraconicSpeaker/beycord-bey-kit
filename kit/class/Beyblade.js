@@ -6,6 +6,13 @@ const fs = require("fs");
 
 //The legendary Beyblade class that shortens everything!!!
 class Beyblade {
+  /**
+  @param {String} name - The Bey's name
+  @param {String} type - The Bey's type
+  @param {String} image - The Bey's (high quality) image
+  @param {String} firstOwner - The Bey's first owner's ID (not yours)
+  @param {number} id - The Bey's ID [Optional]
+  */
   constructor(name, type, image, special, firstOwner, id){
     //Set up the Bey's information
     this.name = name;
@@ -37,7 +44,7 @@ class Beyblade {
     let beyid = this.id
   }
   special(acted, victim, message, player){
-    //Resets the enrgy of a player.
+    //Resets the energy of a player.
     acted.energy = 0;
   }
   displayInfo(message){
