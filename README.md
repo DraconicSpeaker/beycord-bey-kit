@@ -17,6 +17,7 @@ Table of Contents
 • [Help! My eyes hurt looking at the code!](#help-my-eyes-hurt-looking-at-the-code)  
 • [Documentation](#documentation)  
 • [IMPORTANT NOTES](#important-notes)  
+• [Special Move Damage Information](#special-move-damage-information)  
 
 # What is Beycord?
 Just google it and click the first result **that is not an ad**. K thanks!
