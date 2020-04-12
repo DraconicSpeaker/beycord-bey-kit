@@ -68,6 +68,11 @@ How classes are shown is classname: [ properties that can be modified ] (aliases
              All properties from the [Discord User class](https://discord.js.org/#/docs/main/stable/class/User) can also be accessible.
             ] (acted, victim)  
             
+# Special Move Damage Information
+Single Layers: 40-50 damage
+Dual Layers: 50-60
+GT+: 50 - 65
+            
 # IMPORTANT NOTES
 No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player classes. Int, aka Integer, are numbers.
 Make sure you change RichEmbed with MessageEmbed **if you somehow still has it** to make sure that it is compatible as RichEmbed is renamed to MessageEmbed in a discord.js update.
