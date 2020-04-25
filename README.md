@@ -5,7 +5,7 @@ Beycord Bey Kit
 
 To use this kit, you must make sure your device supports JavaScript and have [Node.js](https://nodejs.org/en/) (12.0.0+ version required) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
 ```
-npm install discord.js fs --save
+npm install discord.js eris fs --save
 ```
 Boom! You have done setting up your computer and it's ready to make Beys.
 
@@ -68,6 +68,8 @@ How classes are shown is classname: [ properties that can be modified ] (aliases
              **sp**: The player's special energy charge up. [Int]  
              All properties from the [Discord User class](https://discord.js.org/#/docs/main/stable/class/User) can also be accessible.
             ] (acted, victim)  
+Eris documentation: https://abal.moe/Eris/  
+Embed builder: https://discord.js.org/#/docs/main/stable/class/MessageEmbed  
             
 # Special Move Damage Information
 Single Layers: 40-50 damage  
