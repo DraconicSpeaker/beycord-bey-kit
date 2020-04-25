@@ -1,6 +1,7 @@
 //Code of the currently most complex Beycord Bey in existance: Demon Destroying Bey! The custom exclusive Bey for a kind of moderators in Beycord's server.
 
 const Discord = require("discord.js");
+const Eris = require("eris");
 const Beyblade = require("../class/Beyblade.js");
 
 class DemonDestroyingBey extends Beyblade {
@@ -17,14 +18,14 @@ class DemonDestroyingBey extends Beyblade {
           .setTitle(`[${acted.username}] Demon Destroying Bey used **Special Move 1st Form: Edge Slice**. 68 damage dealt.`)
           .setColor("#551a8b");
         acted.hp = acted.hp - 68;
-        message.channel.send(embed);
+        client.createMessage(mesage.channel.id, {embed:embed});
         break;
       case 1:
         let embed2 = new Discord.RichEmbed()
           .setTitle(`[${acted.username}] Demon Destroying Bey used **Special Move 2nd Form: Eye-blinding Beam**. Its opponent was blinded for 1 minute and missed its attack. 65% damage reduced.`)
           .setColor("#551a8b");
         victim.atk = Math.round((victim.atk / 100) * 35);
-        message.channel.send(embed2);
+        client.createMessage(message.channel.id, {embed:embed2});
         break;
       case 2:
         let embed3 = new Discord.RichEmbed()
@@ -33,7 +34,7 @@ class DemonDestroyingBey extends Beyblade {
         victim.atk = 0;
         victim.hp = victim.hp - 10;
         acted.stamina = acted.stamina + 1;
-        message.channel.send(embed3);
+        client.createMessage(message.channel.id, {embed:embed3});
         break;
     }
   }

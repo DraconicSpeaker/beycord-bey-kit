@@ -5,7 +5,7 @@ Beycord Bey Kit
 
 To use this kit, you must make sure your device supports JavaScript and have [Node.js](https://nodejs.org/en/) (12.0.0+ version required) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
 ```
-npm install discord.js fs --save
+npm install discord.js eris fs --save
 ```
 Boom! You have done setting up your computer and it's ready to make Beys.
 
@@ -17,6 +17,7 @@ Table of Contents
 • [Help! My eyes hurt looking at the code!](#help-my-eyes-hurt-looking-at-the-code)  
 • [Documentation](#documentation)  
 • [IMPORTANT NOTES](#important-notes)  
+• [Special Move Damage Information](#special-move-damage-information)  
 
 # What is Beycord?
 Just google it and click the first result **that is not an ad**. K thanks!
@@ -65,8 +66,15 @@ How classes are shown is classname: [ properties that can be modified ] (aliases
              **maxhp**: The player's max HP. [Int]  
              **maxstamina**: The player's max stamina. [Int]  
              **sp**: The player's special energy charge up. [Int]  
-             All properties from the [Discord User class](https://discord.js.org/#/docs/main/stable/class/User) can also be accessible.
+             All properties from the [Eris User class](https://abal.moe/Eris/docs/User) can also be accessible.
             ] (acted, victim)  
+Eris documentation: https://abal.moe/Eris/  
+Embed builder: https://discord.js.org/#/docs/main/stable/class/MessageEmbed  
+            
+# Special Move Damage Information
+Single Layers: 40-50 damage  
+Dual Layers: 50-60 damage  
+GT+: 50 - 65 damage  
             
 # IMPORTANT NOTES
 No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player classes. Int, aka Integer, are numbers.
