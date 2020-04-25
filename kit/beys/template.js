@@ -1,5 +1,6 @@
 //Import required modules
 const Discord = require("discord.js");
+const Eris = require("eris");
 const Beyblade = require("../class/Beyblade.js");
 
 // Change NewBey to the Bey's name with spaces and special character removed.
@@ -20,7 +21,7 @@ class NewBey extends Beyblade {
     .setTitle(`[${acted.username}] Name used **Special Name**. 123 damage dealt.`)
     .setColor("#551a8b");
     
-    message.channel.send(embed);
+    client.createMessage(message.channel.id, {embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){
