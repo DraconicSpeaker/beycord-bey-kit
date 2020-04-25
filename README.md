@@ -66,7 +66,7 @@ How classes are shown is classname: [ properties that can be modified ] (aliases
              **maxhp**: The player's max HP. [Int]  
              **maxstamina**: The player's max stamina. [Int]  
              **sp**: The player's special energy charge up. [Int]  
-             All properties from the [Discord User class](https://discord.js.org/#/docs/main/stable/class/User) can also be accessible.
+             All properties from the [Eris User class](https://abal.moe/Eris/docs/User) can also be accessible.
             ] (acted, victim)  
 Eris documentation: https://abal.moe/Eris/  
 Embed builder: https://discord.js.org/#/docs/main/stable/class/MessageEmbed  
