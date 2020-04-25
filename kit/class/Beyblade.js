@@ -2,6 +2,7 @@
 
 //Import the require modules
 const Discord = require("discord.js");
+const Eris = require("eris");
 const fs = require("fs");
 
 //The legendary Beyblade class that shortens everything!!!
@@ -60,7 +61,7 @@ class Beyblade {
     .addField("ID", this.id)
     .addField("Original Blader ID",  this.firstOwner);
     
-    message.channel.send(embed);
+    client.createMessage(message.channel.id, {embed: embed});
   }
 }
 
