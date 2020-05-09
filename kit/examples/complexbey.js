@@ -18,14 +18,14 @@ class DemonDestroyingBey extends Beyblade {
           .setTitle(`[${acted.username}] Demon Destroying Bey used **Special Move 1st Form: Edge Slice**. 68 damage dealt.`)
           .setColor("#551a8b");
         acted.hp = acted.hp - 68;
-        client.createMessage(mesage.channel.id, {embed:embed});
+        message.channel.createMessage({embed:embed});
         break;
       case 1:
         let embed2 = new Discord.RichEmbed()
           .setTitle(`[${acted.username}] Demon Destroying Bey used **Special Move 2nd Form: Eye-blinding Beam**. Its opponent was blinded for 1 minute and missed its attack. 65% damage reduced.`)
           .setColor("#551a8b");
         victim.atk = Math.round((victim.atk / 100) * 35);
-        client.createMessage(message.channel.id, {embed:embed2});
+        message.channel.createMessage({embed:embed2});
         break;
       case 2:
         let embed3 = new Discord.RichEmbed()
@@ -34,7 +34,7 @@ class DemonDestroyingBey extends Beyblade {
         victim.atk = 0;
         victim.hp = victim.hp - 10;
         acted.stamina = acted.stamina + 1;
-        client.createMessage(message.channel.id, {embed:embed3});
+        message.channel.createMessage({embed:embed3});
         break;
     }
   }
