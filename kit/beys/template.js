@@ -21,7 +21,7 @@ class NewBey extends Beyblade {
     .setTitle(`[${acted.username}] Name used **Special Name**. 123 damage dealt.`)
     .setColor("#551a8b");
     
-    client.createMessage(message.channel.id, {embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){
