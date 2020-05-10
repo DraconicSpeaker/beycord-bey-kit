@@ -61,7 +61,7 @@ class Beyblade {
     .addField("ID", this.id)
     .addField("Original Blader ID",  this.firstOwner);
     
-    message.channel.createMessage(message.channel.id, {embed: embed});
+    message.channel.createMessage({embed: embed});
   }
 }
 
