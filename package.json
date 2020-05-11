@@ -8,8 +8,9 @@
       "url": "https://github.com/SunSOG/beycord-bey-kit.git"
     },
     "dependencies": {
-    "discord.js": "^11.5.1",
-    "fs": "^0.0.1"
+    "discord.js": "^12.2.0",
+    "fs": "^0.0.1",
+    "eris": "^0.12.0"
   },
     "keywords": [
       "beycord",
