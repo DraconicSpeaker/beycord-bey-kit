@@ -1,7 +1,7 @@
 {
     "name": "beycord-bey-kit",
     "description": "Make a Bey for Beycord.",
-    "version": "0.0.1",
+    "version": "1.0.2",
     "main": "./check.js",
     "repository": {
       "type": "git",
