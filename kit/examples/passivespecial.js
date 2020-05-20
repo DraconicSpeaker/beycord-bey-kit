@@ -25,6 +25,7 @@ class datbey extends Beyblade {
     let embed = new Discord.MessageEmbed()
     .setTitle(`[${acted.username}] dat bey used **Belt Swing**. That hit hard and dealt 56 damage... wow.`)
     .setColor("#551a8b");
+    acted.pused = true;
     message.channel.createMessage({embed:embed});
   }
   displayInfo(message){
