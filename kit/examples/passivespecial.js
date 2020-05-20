@@ -1,5 +1,3 @@
-//Code of the currently most complex Beycord Bey in existance: Demon Destroying Bey! The custom exclusive Bey for a kind of moderators in Beycord's server.
-
 const Discord = require("discord.js");
 const Eris = require("eris");
 const Beyblade = require("../class/Beyblade.js");
