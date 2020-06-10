@@ -1,5 +1,7 @@
 ![Beycord](https://cdn.discordapp.com/avatars/570115430786531340/dfeb381c65bf3299a58895d6a7fde3fb.png)
 
+Please read [this](https://docs.google.com/document/d/1yW-XtCGxLn0HL5m0WOFhYiGOMmJQ-WuILRdcJ9SB66U/) first before doing whatever you want to do next as it is very important, like **very** important.
+
 Beycord Bey Kit
 ===============
 
