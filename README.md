@@ -1,5 +1,7 @@
 ![Beycord](https://cdn.discordapp.com/avatars/570115430786531340/dfeb381c65bf3299a58895d6a7fde3fb.png)
 
+Please read [this](https://docs.google.com/document/d/1yW-XtCGxLn0HL5m0WOFhYiGOMmJQ-WuILRdcJ9SB66U/) first before doing whatever you want to do next as it is very important, like **very** important.
+
 Beycord Bey Kit
 ===============
 
@@ -7,7 +9,7 @@ Beycord Bey Kit
 
 To use this kit, you must make sure your device supports JavaScript and have [Node.js](https://nodejs.org/en/) (12.0.0+ version required) installed. Next, download this git repository into your computer. Once it has finished downloading, open your Node.js command prompt/terminal, "cd" your way to where the folder is installed and type the following in the command terminal:
 ```
-npm install discord.js eris fs --save
+npm install
 ```
 Boom! You have done setting up your computer and it's ready to make Beys.
 
@@ -68,6 +70,7 @@ How classes are shown is classname: [ properties that can be modified ] (aliases
              **maxhp**: The player's max HP. [Int]  
              **maxstamina**: The player's max stamina. [Int]  
              **sp**: The player's special energy charge up. [Int]  
+             **lvl**: The player's Bey's level.
              All properties from the [Eris User class](https://abal.moe/Eris/docs/User) can also be accessible.
             ] (acted, victim)  
 Eris documentation: https://abal.moe/Eris/  
@@ -81,4 +84,5 @@ GT+: 50 - 65 damage
 # IMPORTANT NOTES
 No, the player in the special function is **not** a player class. It's the old database that Beycord used and I am too lazy to remove it so I just kept it there. Just in case the old player database still have some purpose (which it should not). I left it there just in case. The player classes accessible are acted and victim and others are not player classes. Int, aka Integer, are numbers.
 Make sure you change RichEmbed with MessageEmbed **if you somehow still has it** to make sure that it is compatible as RichEmbed is renamed to MessageEmbed in a discord.js update.
-You can use [NVM](https://github.com/nvm-sh/nvm) (Node Version Manager) to upgrade your Node version.
+You can use [NVM](https://github.com/nvm-sh/nvm) (Node Version Manager) to upgrade your Node version.  
+Special moves can't be blocked / effected / removed by anything since they are special.
