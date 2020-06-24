@@ -12,16 +12,25 @@ class Deathscyther extends Beyblade {
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
     
-    //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-    victim.hp = victim.hp - 70;
-    //For more options check the README.md
+     let before = victim.hp;
+    let base = 50;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.3; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Deathscyther used **Death Slash**. Deathscyther utilized it's Accel performance tip to enhance speed as it crashed into it's opponent, striking with one of it's scythe shaped blades to deal 70 damage.`)
+    .setTitle(`[${acted.username}] Deathscyther used **Death Slash**.`)
+	.setDescription(`Deathscyther utilized it's Accel driver to enhance speed as it crashed into it's opponent, striking with one of it's scythe shaped blades to deal ${diff} damage.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){
