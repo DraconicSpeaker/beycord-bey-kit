@@ -11,6 +11,18 @@ class FangFenrir extends Beyblade {
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
+	
+	let before = victim.hp;
+    let base = 40;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.2; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
     victim.hp = victim.hp - 60;
@@ -19,10 +31,11 @@ class FangFenrir extends Beyblade {
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Fang Fenrir used **Howling Boost**. Fenrir increased it's friction by using the down force generated from it's Boost disc to give itself a burst of speed and power, smashing into the enemy wildly for 60 damage! The wind force enhanced stamina by 2.`)
+    .setTitle(`[${acted.username}] Fang Fenrir used **Howling Boost**.`)
+	.setDescription (`Fenrir increased it's friction by using the down force generated from it's Boost disc to give itself a burst of speed and power, smashing into the enemy wildly for ${diff} damage! The wind force enhanced stamina by 2.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

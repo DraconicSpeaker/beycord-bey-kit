@@ -7,24 +7,46 @@ const Beyblade = require("../class/Beyblade.js");
 class XenoXcalibur extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Xeno Xcalibur", "Attack", "https://vignette.wikia.nocookie.net/beyblade/images/2/28/Beyblade_Xcalibur.png/revision/latest?cb=20181219003322", "One Impact /n Double Impact", firstOwner, id);
+    super("Xeno Xcalibur", "Attack", "https://vignette.wikia.nocookie.net/beyblade/images/2/28/Beyblade_Xcalibur.png/revision/latest?cb=20181219003322", "One Impact, Double Impact", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
     
-    if (acted.hp > 60) {
-		 victim.hp = victim.hp - 60;
+    if (acted.hp > Math.round((acted.maxhp/100)*60)) {
+		let before = victim.hp;
+    let base = 40;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.2; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
 		 let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Xeno Xcalibur used **One Impact**. Xcalibur used the saber on it's layer to slash away at the opponent with incredible force, dealing 60 damage!`)
+    .setTitle(`[${acted.username}] Xeno Xcalibur used **One Impact**.`)
+	.setDescription (`Xcalibur used the saber on it's layer to slash away at the opponent with incredible force, dealing ${diff} damage!`)
     .setColor("#551a8b");
-	message.channel.sendMessage({embed: embed});
-	 } else if (acted.hp <= 60) {
-	 victim.hp = victim.hp - 80;
+	message.channel.createMessage({embed: embed});
+	 } else if (acted.hp =< Math.round((acted.maxhp/100)*60)) {
+		 let before = victim.hp;
+    let base = 60;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.2; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
 	 acted.stamina = acted.stamina - 1;
 		 let embed2 = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Xeno Xcalibur used **Double Impact**. Xcalibur's Magnum disc aligned with the saber on it's layer, allowing it to slash away at the opponent with incredible weight behind the attack, dealing 80 damage! The imbalance this causes reduced stamina by 1.`)
+    .setTitle(`[${acted.username}] Xeno Xcalibur used **Double Impact**.`)
+	.setDescription (`Xcalibur's Magnum disc aligned with the saber on it's layer, allowing it to slash away at the opponent with incredible weight behind the attack, dealing ${diff} damage! The imbalance this causes reduced stamina by 1.`)
     .setColor("#551a8b");
-	message.channel.sendMessage({embed: embed2});
+	message.channel.createMessage({embed: embed2});
   }}
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

@@ -13,16 +13,17 @@ class QuadQuetzalcoatl extends Beyblade {
     super.special(acted, victim, message, player);
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-    acted.hp = acted.hp + 40;
+    acted.hp = acted.hp + 50;
 	acted.stamina = acted.stamina + 1;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Quad Quetzalcoatl used **Bound Launch**. Quetzacoatl used the Jerk disc to rebound the enemy away, stabilizing itself in the process to recover 40 hp, and prevent stamina loss this turn.`)
+    .setTitle(`[${acted.username}] Quad Quetzalcoatl used **Bound Launch**.`)
+	.setDescription (`Quetzacoatl utilized the softer plastic of the jerk disc, allowing it to bend in and rebound enemy attacks away, stabilizing itself in the process to recover 50 hp and prevent stamina loss this turn.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

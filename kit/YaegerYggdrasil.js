@@ -14,15 +14,16 @@ class YaegerYggdrasil extends Beyblade {
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
     acted.hp = acted.hp + 50;
-	acted.stamina = acted.stamina + 1;
+	acted.stamina = acted.stamina + 2;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Yaeger Yggdrasil used **Nature Launch**. Yggdrasil used the POM, low friction surface of it's Yielding tip to negate stamina loss this turn, and enhance it's stability, recovering 50 hp!`)
+    .setTitle(`[${acted.username}] Yaeger Yggdrasil used **Nature Launch**.`)
+	.setDescription (`Yggdrasil used the POM, low friction surface of it's Yielding tip to gain 2 stamina, and enhance it's stability, recovering 50 hp!`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

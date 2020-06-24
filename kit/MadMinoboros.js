@@ -11,18 +11,30 @@ class MadMinoboros extends Beyblade {
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
+	
+	let before = victim.hp;
+    let base = 60;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.1; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-    victim.hp = victim.hp - 100;
-	acted.stamina = acted.stamina - 2;
+	victim.atk = Math.round((victim.atk/100)*80);
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Mad Minoboros used **Mad Quake**. Minoboros used the offset weight of the Quarter disc, and offset Quake tip to bounce high into the air as it crashed back down atop it's opponent in a concentrated attack, dealing 100 damage but losing 2 stamina.`)
+    .setTitle(`[${acted.username}] Mad Minoboros used **Mad Quake**.`)
+	.setDescription (`Minoboros used the offset weight of the Quarter disc, and offset Quake tip to bounce high into the air, before it came crashing back down atop it's opponent to avoid direct contact, reducing damage by 20% while dealing ${diff} damage.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){
