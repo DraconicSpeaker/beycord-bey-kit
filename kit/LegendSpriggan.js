@@ -4,52 +4,50 @@ const Eris = require("eris");
 const Beyblade = require("../class/Beyblade.js");
 
 // Change NewBey to the Bey's name with spaces and special character removed.
-class GigantGaia extends Beyblade {
+class LegendSpriggan extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Gigant Gaia", "Balance", "https://i.ibb.co/x86gbcw/Gaia.png", "Swing Launch, Swing Counter", firstOwner, id);
+    super("Legend Spriggan", "Balance", "https://vignette.wikia.nocookie.net/beyblade/images/8/8d/Beyblade_Legend_Spriggan.png/revision/latest?cb=20200211223126", "Upper launch, Axe Launch", firstOwner, id);
+	this.sdchangable = true;
+	this.sd = "Right";
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
     
-    if (victim.atk = 0) {
-		
+    if (acted.bey.sd == "Right") {
 		let before = victim.hp;
-    let base = 70;
+    let base = 50;
     let plus = 0;
     for(var i = 0; i < acted.lvl; i++){
-       plus = plus + 0.1; 
+       plus = plus + 0.2; 
 	   //+0.1 every level which means 1 more damage every 10 levels
     }
     let dmg = base + plus;
     victim.hp = victim.hp - dmg;
     let after = victim.hp;
     let diff = before - after;
-	
-		 acted.stamina = acted.stamina - 1; 
+		 victim.stamina = victim.stamina - 2;
 		 let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Gigant Gaia used **Swing Launch**.`)
-	.setDescription (`Gaia used the wavering spin caused by it's Quarter disc to deliver a heavy smash attack to it's opponent worth ${diff} damage! The unbalanced nature dropped stamina by 1.`)
+    .setTitle(`[${acted.username}] Legend Spriggan used **Upper Launch**.`)
+	.setDescription(`Legend Spriggan climbed the slope of the stadium, speeding back down and using the sloped blade on it's layer to strike from under the opponent for ${diff} damage! Destabilization dropped the opponent's stamina by 2!`)
     .setColor("#551a8b");
 	message.channel.createMessage({embed: embed});
-	 } else if (victim.atk > 0) {
-		 let before = victim.hp;
-    let base = 40;
+	 } else if (acted.bey.sd == "Left") {
+		  let before = victim.hp;
+    let base = 60;
     let plus = 0;
     for(var i = 0; i < acted.lvl; i++){
-       plus = plus + 0.1; 
+       plus = plus + 0.2; 
 	   //+0.1 every level which means 1 more damage every 10 levels
     }
     let dmg = base + plus;
     victim.hp = victim.hp - dmg;
     let after = victim.hp;
     let diff = before - after;
-	
-	 acted.atk = victim.atk;
-	 victim.atk = Math.round((victim.atk/100)*40);
+		 acted.stamina = acted.stamina - 1;
 		 let embed2 = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Gigant Gaia used **Swing Counter**.`)
-	.setDescription (`Gaia negated 60% of the enemy attack, instead using the momentum to ride up the stadium and come back down to slam into the opponent for ${diff} damage + the enemy's attack power!`)
+    .setTitle(`[${acted.username}] Legend Spriggan used **Axe Launch**.`)
+	.setDescription(`Spriggan used the spiky rubber on it's Merge driver to increase friction against the stadium, the larger surface area drastically boosting it's speed and power at the cost of 1 stamina. Spriggan swiftly changed it's trajectory as it used the flat contact point on it's layer to smash into the opponent for ${diff} damage.`)
     .setColor("#551a8b");
 	message.channel.createMessage({embed: embed2});
   }}
@@ -60,6 +58,6 @@ class GigantGaia extends Beyblade {
 }
 
 //Make this file represents the Bey.
-module.exports = GigantGaia;
+module.exports = LegendSpriggan;
 //Made by MrShadow and Draconicspeaker
 //Congrats, You know know how to make a Bey!

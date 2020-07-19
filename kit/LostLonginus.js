@@ -11,18 +11,30 @@ class LostLonginus extends Beyblade {
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
+	
+	 let before = victim.hp;
+    let base = 70;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.5; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-    victim.hp = victim.hp - 54;
-	acted.stamina = acted.stamina - 1;
+	acted.stamina = acted.stamina - 2;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Lost Longinus used **Lost Spiral**. Losr Longinus caught onto the tornado ridge of the stadium, 2 stamina dropped due to grinding, but gained immense speed as it collides head-on into the opponent, dealing 54 damage!`)
+    .setTitle(`[${acted.username}] Lost Longinus used **Lost Spiral**.`)
+	.setDescription (`Longinus caught onto the tornado ridge of the stadium with it's Spiral tip, dropping stamina by 2 due to grinding, but gaining immense speed as it collides head-on into the opponent, dealing ${diff} damage!`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

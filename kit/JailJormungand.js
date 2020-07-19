@@ -13,18 +13,19 @@ class JailJormungand extends Beyblade {
     super.special(acted, victim, message, player);
 	
    if (victim.atk = 0) {
-	   victim.hp = victim.hp - 0;
 		 let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}]  Jail Jormungand attempted to use Undead Launch, but without any incoming attacks, it failed to do anything!`)
+    .setTitle(`[${acted.username}] Jail Jormungand failed to use **Undead Launch**.`)
+	.setDescription (`Jail Jormungand attempted to use Undead Launch, but without any incoming attacks, it failed to do anything!`)
     .setColor("#551a8b");
-	message.channel.sendMessage({embed: embed});
+	message.channel.createMessage({embed: embed});
 	 } else if (victim.atk > 0) {
-	 victim.atk = Math.round((victim.atk/100)*25);
+	 victim.atk = Math.round((victim.atk/100)*30);
 	 acted.stamina = acted.stamina + 3;
 		 let embed2 = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Jail Jormungand used **Undead Launch**. Jormungard used the free spinning wings on it's Cycle tip to reduce incoming damage by 75%, preserving stamina and increasing it by 3!`)
+    .setTitle(`[${acted.username}] Jail Jormungand used **Undead Launch**.`)
+	.setDescription (`Jormungard used the free spinning wings on it's Cycle tip to reduce incoming damage by 70%, preserving stamina and increasing it by 3!`)
     .setColor("#551a8b");
-	message.channel.sendMessage({embed: embed2});
+	message.channel.createMessage({embed: embed2});
   }}
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

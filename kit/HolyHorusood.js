@@ -13,16 +13,17 @@ class HolyHorusood extends Beyblade {
     super.special(acted, victim, message, player);
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-    	victim.atk = Math.round((victim.atk/100)*80);
+    	victim.atk = Math.round((victim.atk/100)*70);
 		acted.stamina = acted.stamina + 3;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Holy Horusood used **Horusood Field**. Horusood's claws on it's Claw tip caught the wind and extended out, generating a huge tornado that repelled 20% of incoming damage and increased stamina by 3!`)
+    .setTitle(`[${acted.username}] Holy Horusood used **Horusood Field**.`)
+	.setDescription (`Horusood's claws on it's Claw tip caught the wind and extended out, generating a huge tornado that repelled 30% of incoming damage and increased stamina by 3!`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

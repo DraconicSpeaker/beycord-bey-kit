@@ -11,19 +11,31 @@ class SurtrS2 extends Beyblade {
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
+	
+	let before = victim.hp;
+    let base = 50;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.15; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-    victim.hp = victim.hp - 40;
 	victim.stamina = victim.stamina - 2;
 	acted.stamina = acted.stamina - 1;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Surtr S2 used **Burning Saber**. Surtr bounced into the air with it's offset Quake tip costing 1 stamina, before crashing down from above using the flame protrusion on it's layer, dealing 40 damage and reducing enemy stamina by 2!`)
+    .setTitle(`[${acted.username}] Surtr S2 used **Burning Saber**.`)
+	.setDescription (`Surtr bounced into the air with it's offset Quake tip costing 1 stamina, before crashing down from above using the flame protrusion on it's layer, dealing ${diff} damage and reducing enemy stamina by 2!`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

@@ -14,15 +14,16 @@ class PsychicPhantom extends Beyblade {
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
     acted.hp = acted.hp + 60;
-	acted.stamina = acted.stamina - 2;
+	acted.stamina = acted.stamina - 1;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Psychic Phantom used **Polish Haunt**. Phantom used it's Polish disc to stabilize itself by grinding against the stadium with it, healing 60 hp at the cost of 2 stamina.`)
+    .setTitle(`[${acted.username}] Psychic Phantom used **Polish Haunt**.`)
+	.setDescription (`Phantom used it's Polish disc to stabilize itself by grinding against the stadium with it, healing 60 hp at the cost of 1 stamina.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){
