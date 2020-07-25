@@ -46,10 +46,11 @@ class ArcBahamut extends Beyblade {
     return bool;
   }
   passed(acted, victim, message, player){
-    victim.atk = Math.round((victim.atk/100)*20);
+    victim.atk = Math.round((victim.atk/100)*50);
+	victim.hp = victim.hp - (victim.atk / 2);
     let embed = new Discord.MessageEmbed()
   .setTitle(`[${acted.username}] Arc Bahamut activated **Final Guard**.`)
-  .setDescription(`The blue sublayer sitting under Bahamut's main layer shifted due to the prongs of it's disc shifting as it grew closer to bursting, shifting the sublayer into the gaps of the main and filling them in. This created a circular barrier that allows Bahamut to deflect 80% of incoming damage.`)
+  .setDescription(`Bahamut utilized the shifted sublayer that filled in the gaps between it's contact points like a barrier. Granting Bahamut the defensive power to block 50% of incoming damage, and deal it back to the opponent.`)
    .setColor("#551a8b");
     message.channel.createMessage({embed:embed});
   }
