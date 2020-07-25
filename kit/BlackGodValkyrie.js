@@ -38,7 +38,7 @@ class BlackGodValkyrie extends Beyblade {
   }
   check(acted, victim, message, player){
     let bool;
-    if (acted.stamina <= Math.round((acted.maxstamina/100)*70)) bool = true;
+    if (acted.stamina <= Math.round((acted.maxstamina/100)*70) && acted.hp > Math.round((acted.maxhp/100)*80)) bool = true;
     else bool = false;
     return bool;
   }
