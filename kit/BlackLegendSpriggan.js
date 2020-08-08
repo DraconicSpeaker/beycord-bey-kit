@@ -4,50 +4,50 @@ const Eris = require("eris");
 const Beyblade = require("../class/Beyblade.js");
 
 // Change NewBey to the Bey's name with spaces and special character removed.
-class NightmareLonginus extends Beyblade {
+class BlackLegendSpriggan extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Nightmare Longinus", "Attack", "https://vignette.wikia.nocookie.net/beyblade/images/a/a5/Beyblade_Nightmare_Longinus.png/revision/latest?cb=20200218030950", "Metal Dragon Destructor, Metal Dragon Crush", firstOwner, id);
+    super("Black Legend Spriggan", "Balance", "https://ibb.co/DkP2ndb", "Upper launch, Axe Launch", firstOwner, id);
+	this.sdchangable = true;
+	this.sd = "Right";
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
     
-    if (acted.hp > Math.round((acted.maxhp/100)*90)) {
+    if (acted.bey.sd == "Right") {
 		let before = victim.hp;
     let base = 50;
     let plus = 0;
     for(var i = 0; i < acted.lvl; i++){
-       plus = plus + 0.3; 
+       plus = plus + 0.2; 
 	   //+0.1 every level which means 1 more damage every 10 levels
     }
     let dmg = base + plus;
     victim.hp = victim.hp - dmg;
     let after = victim.hp;
     let diff = before - after;
-
-		 acted.hp = acted.hp - 25;
-		 acted.stamina = acted.stamina + 1;
+		 victim.stamina = victim.stamina - 2;
 		 let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Nightmare Longinus used **Metal Dragon Destructor**.`)
-	.setDescription(`Longinus recoiled off a wall to gain speed at the cost of 25 hp, before slamming into the opponent for ${diff}! Longinus used the free spinning ring on it's Destroy driver to negate stamina loss this turn!`)
+    .setTitle(`[${acted.username}] Black Legend Spriggan used **Upper Launch**.`)
+	.setDescription(`Legend Spriggan climbed the slope of the stadium, speeding back down and using the sloped blade on it's layer to strike from under the opponent for ${diff} damage! Destabilization dropped the opponent's stamina by 2!`)
     .setColor("#551a8b");
 	message.channel.createMessage({embed: embed});
-	 } else if (acted.hp <= Math.round((acted.maxhp/100)*90)) {
-		 let before = victim.hp;
-    let base = 70;
+	 } else if (acted.bey.sd == "Left") {
+		  let before = victim.hp;
+    let base = 60;
     let plus = 0;
     for(var i = 0; i < acted.lvl; i++){
-       plus = plus + 0.5; 
+       plus = plus + 0.2; 
 	   //+0.1 every level which means 1 more damage every 10 levels
     }
     let dmg = base + plus;
     victim.hp = victim.hp - dmg;
     let after = victim.hp;
     let diff = before - after;
-	 acted.stamina = acted.stamina - 1;
+		 acted.stamina = acted.stamina - 1;
 		 let embed2 = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Nightmare Longinus used **Metal Dragon Crush**.`)
-	.setDescription(`The metal dragon heads on Longinus' layer shifted behind the wings as it got closer to bursting point, putting weight into the two contact points as it gained a huge increase in strength as a result. Longinus crashed into the enemy with a fierce, heavyweight attack for ${diff} damage, the weight distribution throwing off balance and dropping stamina by 1`)
+    .setTitle(`[${acted.username}] Black Legend Spriggan used **Axe Launch**.`)
+	.setDescription(`Spriggan used the spiky rubber on it's Merge driver to increase friction against the stadium, the larger surface area drastically boosting it's speed and power at the cost of 1 stamina. Spriggan swiftly changed it's trajectory as it used the flat contact point on it's layer to smash into the opponent for ${diff} damage.`)
     .setColor("#551a8b");
 	message.channel.createMessage({embed: embed2});
   }}
@@ -58,6 +58,6 @@ class NightmareLonginus extends Beyblade {
 }
 
 //Make this file represents the Bey.
-module.exports = NightmareLonginus;
+module.exports = BlackLegendSpriggan;
 //Made by MrShadow and Draconicspeaker
 //Congrats, You know know how to make a Bey!

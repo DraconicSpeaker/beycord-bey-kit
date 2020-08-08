@@ -12,7 +12,7 @@ class ArcBahamut extends Beyblade {
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
 	
-	if (acted.hp > Math.round((acted.maxhp/100)*65)) {
+	if (acted.hp > Math.round((acted.maxhp/100)*70)) {
 		 let embed = new Discord.MessageEmbed()
     .setTitle(`[${acted.username}] Arc Bahamut failed to use **Final Crash**.`)
 	.setDescription (`Final Guard must be active to use this special move.`)
@@ -41,15 +41,16 @@ class ArcBahamut extends Beyblade {
   }}
   check(acted, victim, message, player){
     let bool;
-    if (acted.hp <= Math.round((acted.maxhp/100)*65)) bool = true;
+    if (acted.hp <= Math.round((acted.maxhp/100)*70)) bool = true;
     else bool = false;
     return bool;
   }
   passed(acted, victim, message, player){
-    victim.atk = Math.round((victim.atk/100)*75);
+    victim.atk = Math.round((victim.atk/100)*50);
+	victim.hp = victim.hp - (victim.atk / 2);
     let embed = new Discord.MessageEmbed()
   .setTitle(`[${acted.username}] Arc Bahamut activated **Final Guard**.`)
-  .setDescription(`The blue sublayer sitting under Bahamut's main layer shifted due to the prongs of it's disc shifting as it grew closer to bursting, shifting the sublayer into the gaps of the main and filling them in. This created a circular barrier that allows Bahamut to deflect 25% of incoming damage till the end of the match.`)
+  .setDescription(`Bahamut utilized the shifted sublayer that filled in the gaps between it's contact points like a barrier. Granting Bahamut the defensive power to block 50% of incoming damage, and deal it back to the opponent.`)
    .setColor("#551a8b");
     message.channel.createMessage({embed:embed});
   }
