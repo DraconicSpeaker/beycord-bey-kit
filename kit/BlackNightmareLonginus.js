@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class BlackNightmareLonginus extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Black Nightmare Longinus", "Attack", "https://vignette.wikia.nocookie.net/beyblade/images/a/a5/Beyblade_Nightmare_Longinus.png/revision/latest?cb=20200218030950", "Metal Dragon Destructor, Metal Dragon Crush", firstOwner, id);
+    super("Black Nightmare Longinus", "Attack", "https://i.ibb.co/zHhy7LC/BNL.png", "Metal Dragon Destructor, Metal Dragon Crush", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);

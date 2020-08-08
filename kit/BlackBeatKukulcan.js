@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class BlackBeatKukulcan extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Black Beat Kukulcan", "Attack", "https://ibb.co/YQQ8S0s", "Thunder Attack, Trigger Attack", firstOwner, id);
+    super("Black Beat Kukulcan", "Attack", "https://i.ibb.co/QQQnVDw/BBK.png", "Thunder Attack, Trigger Attack", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);

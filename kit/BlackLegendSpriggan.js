@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class BlackLegendSpriggan extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Black Legend Spriggan", "Balance", "https://ibb.co/DkP2ndb", "Upper launch, Axe Launch", firstOwner, id);
+    super("Black Legend Spriggan", "Balance", "https://i.ibb.co/CvpGFLt/BlackLS.png", "Upper launch, Axe Launch", firstOwner, id);
 	this.sdchangable = true;
 	this.sd = "Right";
   }

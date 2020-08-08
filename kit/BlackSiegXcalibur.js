@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class BlackSiegXcalibur extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Black Sieg Xcalibur", "Attack", "https://ibb.co/DbBvxJS", "Passive: Full Metal Surge, Double Impact, Triple Impact", firstOwner, id);
+    super("Black Sieg Xcalibur", "Attack", "https://i.ibb.co/LPTcLF2/BlackSX.png", "Passive: Full Metal Surge, Double Impact, Triple Impact", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);

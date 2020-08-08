@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class BlackGodValkyrie extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Black God Valkyrie", "Attack", "https://ibb.co/tpFWQPR", "Passive: God Reboot, Bound Jet Launch", firstOwner, id);
+    super("Black God Valkyrie", "Attack", "https://i.ibb.co/r2N1Ff9/BlackGV.png", "Passive: God Reboot, Bound Jet Launch", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
