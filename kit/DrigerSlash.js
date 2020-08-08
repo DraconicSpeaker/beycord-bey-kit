@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class DrigerSlash extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Driger Slash", "Type", "https://ibb.co/KDjpJKb", "Tiger Claw", firstOwner, id);
+    super("Driger Slash", "Type", "https://i.ibb.co/ZS6p02G/drigger.png", "Tiger Claw", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);

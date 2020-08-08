@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class DracielShield extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Draciel Shield", "Defense", "https://ibb.co/KxnWjg0", "Central Defense", firstOwner, id);
+    super("Draciel Shield", "Defense", "https://i.ibb.co/v49kxWw/Draciel.png", "Central Defense", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
