@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class DranzerSpiral extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Dranzer Spiral", "Balance", "https://ibb.co/rwTb2sj", "Fire Spin", firstOwner, id);
+    super("Dranzer Spiral", "Balance", "https://i.ibb.co/z4j8VJM/Dranzser.png", "Fire Spin", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);

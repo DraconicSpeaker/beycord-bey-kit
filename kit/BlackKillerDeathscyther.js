@@ -7,7 +7,7 @@ const Beyblade = require("../class/Beyblade.js");
 class BlackKillerDeathscyther extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Black Killer Deathscyther", "Attack", "https://ibb.co/QFV1BqC", "Double Strike", firstOwner, id);
+    super("Black Killer Deathscyther", "Attack", "https://i.ibb.co/nsy52Vn/BKD.png", "Double Strike", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
