@@ -84,6 +84,7 @@ fs.readdir("./kit/beys/", (err, files) => {
     }catch(err){throw err}
     if(passed === true) try{bey.passed(player, dummy, biomessage, {})}catch(err){throw err}
     try{bey.special(player, dummy, biomessage, {})}catch(err){throw err}
+    console.log(`${f} passed!`);
   });
 });
-console.log("Advanced check gone through!");
+console.log("Advanced check gone through! Please fix the errors if any and the Beys should be ready for submission!");
