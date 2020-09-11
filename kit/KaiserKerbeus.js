@@ -13,19 +13,21 @@ class KaiserKerbeus extends Beyblade {
     super.special(acted, victim, message, player);
     
    if (victim.atk = 0) {
-	   victim.stamina = victim.stamina - 3;
+	   victim.stamina = victim.stamina - 2;
 	   acted.stamina = acted.stamina + 2;
 		 let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Kaiser Kerbeus used **Chain Launch**. Kerbeus went on the offense, using it's defensive, chain-like layer to attack the opponent as the chains shredded away at the opponent's stamina, draining it by 3 while increasing it's own by 2!`)
+    .setTitle(`[${acted.username}] Kaiser Kerbeus used **Chain Launch**.`)
+	.setDescription (`Kerbeus went on the offense, using it's defensive, chain-like layer to attack the opponent as the chains shredded away at the opponent's stamina, draining it by 2 while increasing it's own by 2!`)
     .setColor("#551a8b");
-	message.channel.sendMessage({embed: embed});
+	message.channel.createMessage({embed: embed});
 	 } else if (victim.atk > 0) {
 	 victim.atk = Math.round((victim.atk/100)*50);
 	 acted.stamina = acted.stamina + 2;
 		 let embed2 = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Kaiser Kerbeus used **Chain Launch**. Kerbeus used it's defensive, chain-like layer to parry the enemy attacks and reduce incoming damage by 50%, reducing recoil enough to preserve stamina and increase it by 2!`)
+    .setTitle(`[${acted.username}] Kaiser Kerbeus used **Chain Launch**.`)
+	.setDescription (`Kerbeus used it's defensive, chain-like layer to parry the enemy attacks and reduce incoming damage by 50%, reducing recoil enough to preserve stamina and increase it by 2!`)
     .setColor("#551a8b");
-	message.channel.sendMessage({embed: embed2});
+	message.channel.createMessage({embed: embed2});
   }}
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

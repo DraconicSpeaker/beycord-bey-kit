@@ -13,16 +13,17 @@ class ExceedEvileye extends Beyblade {
     super.special(acted, victim, message, player);
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-    victim.atk = 0;
-	acted.stamina = acted.stamina - 2;
+    victim.atk = Math.round((victim.atk/100)*20);
+	acted.stamina = acted.stamina - 1;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Exceed Evil-eye used **Serpent Launch**. Evileye deflected the enemy's attacks due to the outward weight distribution of it's Gravity disc, negating all incoming damage. But it's Atomic tip is forced to lock up when defending, reducing stamina by 2.`)
+    .setTitle(`[${acted.username}] Exceed Evil-eye used **Serpent Launch**.`)
+	.setDescription (`Evileye deflected the enemy's attacks due to the outward weight distribution of it's Gravity disc, negating 80% of incoming damage. But it's Atomic driver is forced to lock up when defending, reducing stamina by 1.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

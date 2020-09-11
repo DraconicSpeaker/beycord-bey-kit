@@ -14,15 +14,16 @@ class Trident extends Beyblade {
     
     //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
     acted.atk = victim.atk;
-	acted.stamina = acted.stamina + 2;
+	acted.stamina = acted.stamina + 3;
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Trident used **Claw Counter**. The concentrated weight Trident's Heavy disc allowed it to extend the claws of the Claw tip, creating a gale force strong enough to enhance stamina by 2. The gale force parried and reflected the enemy's attack back to them!`)
+    .setTitle(`[${acted.username}] Trident used **Claw Counter**.`)
+	.setDescription(`The concentrated weight Trident's Heavy disc allowed it to extend the claws of the Claw driver, creating a gale force strong enough to enhance stamina by 3. The gale force parried and reflected the enemy's attack back to them!`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

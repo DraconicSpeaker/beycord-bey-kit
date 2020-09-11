@@ -19,10 +19,11 @@ class Ragnaruk extends Beyblade {
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Ragnaruk used **Anchor Zone**. Ragnaruk concentrated it's centralized weight into spin velocity, enhancing it's defensive power and reducing damage by 30%. It's Survive tip's small surface area reduces stamina loss, granting it plus 3 stamina.`)
+    .setTitle(`[${acted.username}] Ragnaruk used **Anchor Zone**.`)
+	.setDescription(`Ragnaruk concentrated it's centralized weight into spin velocity, enhancing it's defensive power and reducing damage by 30%. It's Survive tip's small surface area reduces stamina loss, granting it plus 3 stamina.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

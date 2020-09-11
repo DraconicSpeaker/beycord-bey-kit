@@ -12,18 +12,30 @@ class Kerbeus extends Beyblade {
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
     
-    //Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
-        victim.hp = victim.hp - 40;
+    let before = victim.hp;
+    let base = 40;
+    let plus = 0;
+    for(var i = 0; i < acted.lvl; i++){
+       plus = plus + 0.2; 
+	   //+0.1 every level which means 1 more damage every 10 levels
+    }
+    let dmg = base + plus;
+    victim.hp = victim.hp - dmg;
+    let after = victim.hp;
+    let diff = before - after;
+	
+	//Change "victim.hp = victim.hp - 123" to "victim.hp = victim.hp - <damage number>. This and the line below can be removed if the special move does not deal any damage.
 	acted.stamina = acted.stamina - 2;
-	victim.atk = Math.round((victim.atk / 100) * 75);
+	victim.atk = Math.round((victim.atk/100)*75);
     //For more options check the README.md
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Kerbeus used **Chain Defense**. Utilizing central weight distribution, Kerbeus enhanced it's resistance and reduced enemy attack damage by 25%, and shredded into the opponent in retaliation for 40! Stamina was reduced by 2 due to the tabs on it's Defense tip.`)
+    .setTitle(`[${acted.username}] Kerbeus used **Chain Defense**.`)
+	.setDescription(`Kerbeus utilized the centralized weight distribution of it's Central disc, increasing it's spin velocity as a method of improving it's damage resistance, along with the tabs on it's Defense driver to reduce damage by 25% at the cost of 2 stamina. Kerbeus retaliated by using the chain on it's layer to shred into the opponent for ${diff} damage`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

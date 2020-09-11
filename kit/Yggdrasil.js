@@ -19,10 +19,11 @@ class Yggdrasil extends Beyblade {
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Yggdrasil used **Slip Launch**. Yggdrasil slipped by the opponent's attacks, utilizing the even distribution of it's Ring disc to stabilize itself for +35 hp. The free spinning nature of it's Gyro tip raises stamina by 3.`)
+    .setTitle(`[${acted.username}] Yggdrasil used **Slip Launch**.`)
+	.setDescription(`Yggdrasil slipped by the opponent's attacks, utilizing the even distribution of it's Ring disc to stabilize itself for +35 hp. The free spinning nature of it's Gyro tip raises stamina by 3.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

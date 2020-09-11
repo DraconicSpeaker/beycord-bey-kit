@@ -19,10 +19,11 @@ class Neptune extends Beyblade {
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Neptune used **Splash Launch**. Neptune's Armed disc's weight held it down with strong force, blocking 60% of the enemy's attack. The grip of the Zephyr and the weight of Armed improved it's stability, granting 50 hp.`)
+    .setTitle(`[${acted.username}] Neptune used **Splash Launch**.`)
+	.setDescription(`Neptune's Armed disc's weight held it down with strong force, blocking 60% of the enemy's attack. The grip of the Zephyr driver and the weight of Armed improved it's stability, granting 50 hp.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){

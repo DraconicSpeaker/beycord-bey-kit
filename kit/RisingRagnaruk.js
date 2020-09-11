@@ -19,10 +19,11 @@ class RisingRagnaruk extends Beyblade {
     
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
-    .setTitle(`[${acted.username}] Rising Ragnaruk used **Ragnaruk Zone**. Ragnaruk's used the free spinning plate on it's Revolve tip to reduce stamina lost and repel the enemy away, increasing stamina by 3 and dropping the opponent's by 1!`)
+    .setTitle(`[${acted.username}] Rising Ragnaruk used **Ragnaruk Zone**.`)
+	.setDescription (`Ragnaruk reduced stamina loss by utilizing the Revolve driver's sharp tip in the center of it, reducing stamina loss as much as possible to enhance stamina by 3 while using it's free spinning plate to reduce knockback when knocked off balance, stalling out the opponent and dropping their stamina by 1.`)
     .setColor("#551a8b");
     
-    message.channel.sendMessage({embed: embed});
+    message.channel.createMessage({embed: embed});
   }
   //The displayInfo function doesn't need to be modified as it updates by itself. :O
   displayInfo(message){
