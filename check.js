@@ -25,7 +25,8 @@ resolve(true);
 });
 }
 
-await check();
+check();
+
 console.log("Basic check passed! Advanced check beginning.")
   let dummy = {
     hp: 1000000,
@@ -80,7 +81,7 @@ fs.readdir("./kit/beys/", (err, files) => {
     let props = require(`./kit/beys/${f}`);
     let bey = new props("123", 1);
     try {
-    let passed = bey.check(player, dummy, biomessage, {});
+    let passed = bey.check(player, dummy, biomessage, {}) || false;
     }catch(err){throw err}
     if(passed === true) try{bey.passed(player, dummy, biomessage, {})}catch(err){throw err}
     try{bey.special(player, dummy, biomessage, {})}catch(err){throw err}
