@@ -82,8 +82,8 @@ fs.readdir("./kit/beys/", (err, files) => {
     let bey = new props("123", 1);
     let passed = false;
     if(bey.check) passed = bey.check(player, dummy, biomessage, {}) || false;
-    if(passed === true) try{bey.passed(player, dummy, biomessage, {})}catch(err){throw err}
-    try{bey.special(player, dummy, biomessage, {})}catch(err){throw err}
+    if(passed === true) try{bey.passed(player, dummy, biomessage, {})}catch(err){console.error(err)}
+    try{bey.special(player, dummy, biomessage, {})}catch(err){console.error(err)}
     console.log(`${f} passed!`);
   });
 });
