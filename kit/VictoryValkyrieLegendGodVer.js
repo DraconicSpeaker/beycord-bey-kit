@@ -7,7 +7,7 @@ const Beyblade = require("./Beyblade.js");
 class VictoryValkyrieLegendGodVer extends Beyblade {
 //Set up the Bey's information. Change "Name", "Type", "Image Link" and "Special Move Name" to what they are supposed to be.
   constructor(firstOwner, id){
-    super("Legend God Victory Valkyrie", "Attack", "https://i.imgur.com/3pPqVQs.png", "Legend Flash Assault\nPassive: Legendary Shield", firstOwner, id);
+    super("Legend God Victory Valkyrie", "Attack", "https://i.imgur.com/3pPqVQs.png", "Passive: Legendary Shield\nLegend Flash Assault", firstOwner, id);
   }
   special(acted, victim, message, player){
     super.special(acted, victim, message, player);
