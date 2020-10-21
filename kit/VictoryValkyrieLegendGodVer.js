@@ -31,7 +31,7 @@ class VictoryValkyrieLegendGodVer extends Beyblade {
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
     .setTitle(`[${acted.username}] (`Legend God Victory Valkyrie used **Legendary Flash Assault**.`)
-        .setDescription (`${diff} damage dealt from the immense speed boost of Assault!\n-2 stamina from the friction.`) 
+        .setDescription (`${diff} damage dealt!\n-2 stamina penalty.`) 
     .setColor("#551a8b");
     
     message.channel.send(embed);
@@ -47,7 +47,7 @@ class VictoryValkyrieLegendGodVer extends Beyblade {
 	  victim.atk = Math.round((victim.atk/100*40))
     let embed = new Discord.MessageEmbed()
   .setTitle(`[${acted.username}] Legend God Victory Valkyrie activated **Legendary Shield**.`)
-  .setDescription(`60% of incoming damage blocked and reflected by the Bumper disc!`)
+  .setDescription(`60% of incoming damage blocked and dealt back to the enemy!`)
    .setColor("#551a8b");
     message.channel.createMessage({embed:embed});
   }
