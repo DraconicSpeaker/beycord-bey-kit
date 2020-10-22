@@ -34,7 +34,7 @@ class NewBey extends Beyblade {
    check(acted, victim, message, player){
     let chance = Math.floor(math.random()*1);
     let bool;
-    if (acted.atk > 0 && chance === 1) bool = true;
+    if (acted.move === "Fight" && chance === 1) bool = true;
     else bool = false;
     return bool;
   }
