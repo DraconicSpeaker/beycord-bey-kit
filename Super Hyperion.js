@@ -41,7 +41,7 @@ class NewBey extends Beyblade {
   passed(acted, victim, message, player){
           acted.atk = acted.atk + (acted.atk/100*50)
           victim.hp = victim.hp - acted.atk
-	  acted.stamina = acted.stamina - 1.9
+	  acted.stamina = acted.stamina - 1.6
     let embed = new Discord.MessageEmbed()
   .setTitle(`[${acted.username}] Super Hyperion activated **Xceed Counter**.`)
   .setDescription(`${diff} damage dealt.\n50% of attack dealt as extra damage.\n1.6 stamina penalty.`)
