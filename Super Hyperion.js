@@ -22,7 +22,7 @@ class NewBey extends Beyblade {
     victim.hp = victim.hp - dmg;
     let after = victim.hp;
     let diff = before - after;
-
+    acted.stamina = acted.stamina - 1.6;
     //Make sure to change the "Name", "Special Name" and damage dealt below.
     let embed = new Discord.MessageEmbed()
     .setTitle(`[${acted.username}] Super Hyperion used **Super Strike**.`)
